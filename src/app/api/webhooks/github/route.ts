@@ -140,7 +140,7 @@ function handleDeploymentStatus(payload: GitHubPayload): string | null {
 // ── Route Chat ID Based on Repo ──────────────────────────────
 
 function getChatId(repoName: string): string {
-  const forgeProjects = ['clowforge-dash', 'conversabiz-admin', 'voyager-ai', 'spanish-factoria'];
+  const forgeProjects = ['clowforge-dash', 'conversabiz-admin', 'voyager-ai', 'spanish-factoria', 'ele-studio', 'clowpaco-dashboard', 'espanol-prof'];
   if (forgeProjects.includes(repoName)) return CLOWFORGE_CHAT_ID;
   return TELEGRAM_CHAT_ID;
 }
