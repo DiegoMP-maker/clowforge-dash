@@ -61,8 +61,8 @@ function handlePush(payload: GitHubPayload): string | null {
   if (commits.length === 0) return null;
 
   const commitList = commits.slice(0, 3).map(c => {
-    const msg = (c.message as string || '').split('\n')[0].slice(0, 60);
-    const sha = (c.id as string || '').slice(0, 7);
+    const msg = ((c.message as string) || '').split('\n')[0]?.slice(0, 60) ?? '';
+    const sha = ((c.id as string) || '').slice(0, 7);
     return `  <code>${sha}</code> ${msg}`;
   }).join('\n');
 
