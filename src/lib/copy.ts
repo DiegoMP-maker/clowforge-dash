@@ -1,0 +1,198 @@
+export const COPY = {
+  nav: {
+    projects: 'Projects',
+    runs: 'Runs',
+    costs: 'Costs',
+    health: 'Health',
+    settings: 'Settings',
+  },
+  actions: {
+    save: 'Save',
+    cancel: 'Cancel',
+    delete: 'Delete',
+    deploy: 'Deploy',
+    refresh: 'Refresh',
+    filter: 'Filter',
+    export: 'Export',
+    terminate: 'Terminate',
+    retry: 'Retry',
+    viewLogs: 'View Logs',
+    loading: 'Loading...',
+    close: 'Close',
+  },
+  auth: {
+    login: {
+      title: 'ClowForge Dashboard',
+      subtitle: 'Sign in to continue',
+      emailLabel: 'Email',
+      emailPlaceholder: 'you@example.com',
+      passwordLabel: 'Password',
+      passwordPlaceholder: 'Enter your password',
+      submit: 'Sign in',
+      invalid: 'Invalid email or password',
+      network: 'Connection failed. Check network and retry.',
+    },
+  },
+  projects: {
+    title: 'Projects',
+    new: 'New Project',
+    stats: {
+      active: 'Active',
+      completed: 'Completed',
+      failed: 'Failed',
+      total: 'Total',
+    },
+    empty: {
+      title: 'No projects yet',
+      message: 'Create your first project to get started with ClowForge.',
+      cta: 'Create Project',
+    },
+    table: {
+      preview: 'Preview',
+      production: 'Production',
+      repository: 'Repository',
+    },
+  },
+  project: {
+    tabs: {
+      runs: 'Runs',
+      files: 'Files',
+      settings: 'Settings',
+    },
+    info: {
+      status: 'Status',
+      created: 'Created',
+      updated: 'Last updated',
+      preview: 'Preview URL',
+      production: 'Production URL',
+      repository: 'Repository',
+      branch: 'Branch',
+    },
+    runs: {
+      empty: {
+        title: 'No runs yet',
+        message: "This project hasn't been built yet. Deploy to create a run.",
+        cta: 'Deploy',
+      },
+    },
+  },
+  runs: {
+    title: 'Runs',
+    table: {
+      id: 'ID',
+      project: 'Project',
+      status: 'Status',
+      started: 'Started',
+      duration: 'Duration',
+      cost: 'Cost',
+      agent: 'Agent',
+      phase: 'Phase',
+      tokens: 'Tokens',
+    },
+    empty: {
+      title: 'No runs found',
+      message: 'Try adjusting your filters or create a new project.',
+      cta: 'Clear Filters',
+    },
+  },
+  run: {
+    info: {
+      id: 'Run ID',
+      status: 'Status',
+      project: 'Project',
+      started: 'Started',
+      completed: 'Completed',
+      duration: 'Duration',
+      cost: 'Cost',
+    },
+    tasks: {
+      title: 'Tasks',
+    },
+    empty: {
+      tasks: {
+        title: 'Run initializing...',
+        message: 'Tasks will appear here as the run progresses.',
+      },
+    },
+  },
+  costs: {
+    title: 'Costs',
+    export: 'Export CSV',
+    stats: {
+      total: 'Total Cost',
+      thisMonth: 'This Month',
+      avgRun: 'Avg per Run',
+    },
+    chart: {
+      title: 'Cost Trend (Last 30 Days)',
+    },
+    breakdown: {
+      title: 'Cost Breakdown by Agent',
+      table: {
+        agent: 'Agent',
+        runs: 'Runs',
+        totalCost: 'Total Cost',
+        avgCost: 'Avg Cost',
+        percentage: '% of Total',
+      },
+    },
+  },
+  health: {
+    title: 'System Health',
+    status: {
+      operational: 'All Systems Operational',
+      degraded: 'Degraded Performance',
+      outage: 'Service Outage',
+    },
+    service: {
+      supabase: 'Supabase',
+      vercel: 'Vercel',
+      openai: 'OpenAI',
+      operational: 'Operational',
+      degraded: 'Degraded',
+      down: 'Down',
+    },
+    errors: {
+      title: 'Recent Errors',
+      emptyTitle: 'No recent errors',
+      emptyMessage: 'All systems are running smoothly.',
+    },
+  },
+  settings: {
+    title: 'Settings',
+    tabs: {
+      account: 'Account',
+      notifications: 'Notifications',
+      security: 'Security',
+    },
+    account: {
+      email: 'Email',
+      name: 'Full name',
+      role: 'Role',
+      save: 'Save changes',
+    },
+    notifications: {
+      email: 'Email notifications',
+      runCompleted: 'Run completed',
+      runFailed: 'Run failed',
+      save: 'Save preferences',
+    },
+    security: {
+      password: 'Password',
+      changePassword: 'Change password',
+      currentPassword: 'Current password',
+      newPassword: 'New password',
+      confirmPassword: 'Confirm new password',
+    },
+  },
+  status: {
+    pending: 'Pending',
+    running: 'Running',
+    completed: 'Completed',
+    failed: 'Failed',
+    cancelled: 'Cancelled',
+    active: 'Active',
+    paused: 'Paused',
+    draft: 'Draft',
+  },
+} as const;

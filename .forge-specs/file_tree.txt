@@ -1,0 +1,166 @@
+clowforge-dashboard/
+├── .env.local.example              # Environment variables template
+├── .eslintrc.cjs                   # ESLint config with Next.js rules
+├── .prettierrc                     # Prettier formatting rules
+├── .gitignore                      # Git ignore patterns
+├── tsconfig.json                   # TypeScript strict mode config
+├── tailwind.config.ts              # Tailwind 4 config with dashboard theme
+├── next.config.ts                  # Next.js config (headers, redirects)
+├── package.json                    # Dependencies and scripts
+├── pnpm-lock.yaml                  # Lockfile
+├── README.md                       # Project documentation
+├── public/
+│   ├── favicon.ico                 # ClowForge favicon
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   └── logo.svg                    # ClowForge logo
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx              # Root layout (fonts, providers)
+│   │   ├── page.tsx                # Projects dashboard (main page)
+│   │   ├── not-found.tsx           # 404 page
+│   │   ├── error.tsx               # Global error boundary
+│   │   ├── loading.tsx             # Global loading skeleton
+│   │   ├── globals.css             # Tailwind imports + CSS variables
+│   │   ├── (auth)/                 # Auth pages (minimal layout)
+│   │   │   ├── layout.tsx          # Centered auth layout
+│   │   │   ├── login/
+│   │   │   │   └── page.tsx        # Login page (email/password)
+│   │   │   └── callback/
+│   │   │       └── route.ts        # Auth callback handler
+│   │   ├── (dashboard)/            # Main dashboard (authenticated)
+│   │   │   ├── layout.tsx          # Dashboard layout (sidebar + header)
+│   │   │   ├── projects/
+│   │   │   │   └── [id]/
+│   │   │   │       ├── page.tsx    # Project detail (runs, deploys)
+│   │   │   │       └── loading.tsx # Project loading skeleton
+│   │   │   ├── runs/
+│   │   │   │   ├── page.tsx        # All runs list
+│   │   │   │   ├── loading.tsx     # Runs loading skeleton
+│   │   │   │   └── [id]/
+│   │   │   │       ├── page.tsx    # Run detail (tasks, timeline)
+│   │   │   │       └── loading.tsx # Run detail skeleton
+│   │   │   ├── costs/
+│   │   │   │   ├── page.tsx        # Cost dashboard
+│   │   │   │   └── loading.tsx     # Costs loading skeleton
+│   │   │   ├── health/
+│   │   │   │   └── page.tsx        # System health overview
+│   │   │   └── settings/
+│   │   │       └── page.tsx        # Dashboard settings
+│   │   └── api/
+│   │       ├── auth/
+│   │       │   └── callback/
+│   │       │       └── route.ts    # Supabase auth callback
+│   │       ├── projects/
+│   │       │   ├── route.ts        # GET: List projects
+│   │       │   └── [id]/
+│   │       │       └── route.ts    # GET: Project detail
+│   │       ├── runs/
+│   │       │   ├── route.ts        # GET: List runs with filters
+│   │       │   └── [id]/
+│   │       │       ├── route.ts    # GET: Run detail with tasks
+│   │       │       └── tasks/
+│   │       │           └── route.ts # GET: Tasks for run
+│   │       ├── deploy/
+│   │       │   ├── preview/
+│   │       │   │   └── route.ts    # POST: Trigger preview deploy
+│   │       │   ├── production/
+│   │       │   │   └── route.ts    # POST: Trigger production deploy
+│   │       │   └── rollback/
+│   │       │       └── route.ts    # POST: Rollback deployment
+│   │       ├── costs/
+│   │       │   ├── route.ts        # GET: Cost summary
+│   │       │   └── monthly/
+│   │       │       └── route.ts    # GET: Monthly breakdown
+│   │       └── health/
+│   │           └── route.ts        # GET: System health check
+│   ├── components/
+│   │   ├── ui/                     # Primitive UI components
+│   │   │   ├── button.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── badge.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── table.tsx
+│   │   │   ├── skeleton.tsx
+│   │   │   ├── spinner.tsx
+│   │   │   ├── toast.tsx
+│   │   │   ├── toaster.tsx
+│   │   │   ├── dropdown-menu.tsx
+│   │   │   ├── tabs.tsx
+│   │   │   ├── progress.tsx
+│   │   │   ├── tooltip.tsx
+│   │   │   └── dialog.tsx
+│   │   ├── layout/                 # Layout components
+│   │   │   ├── sidebar.tsx         # Dashboard sidebar navigation
+│   │   │   ├── header.tsx          # Dashboard header with user menu
+│   │   │   ├── user-menu.tsx       # User dropdown (logout, settings)
+│   │   │   └── breadcrumbs.tsx     # Page breadcrumbs
+│   │   ├── projects/               # Project-related components
+│   │   │   ├── project-card.tsx    # Project card for grid
+│   │   │   ├── project-table.tsx   # Projects data table
+│   │   │   ├── project-status.tsx  # Status badge component
+│   │   │   ├── deploy-urls.tsx     # Preview/production URL display
+│   │   │   └── deploy-actions.tsx  # Deploy/rollback buttons
+│   │   ├── runs/                   # Run-related components
+│   │   │   ├── run-card.tsx        # Run summary card
+│   │   │   ├── run-table.tsx       # Runs data table
+│   │   │   ├── run-status.tsx      # Run status badge
+│   │   │   ├── run-timeline.tsx    # Visual task timeline
+│   │   │   └── run-filters.tsx     # Status/date filters
+│   │   ├── tasks/                  # Task-related components
+│   │   │   ├── task-list.tsx       # Task list for run
+│   │   │   ├── task-item.tsx       # Single task row
+│   │   │   ├── task-status.tsx     # Task status badge
+│   │   │   └── task-details.tsx    # Expandable task details
+│   │   ├── costs/                  # Cost-related components
+│   │   │   ├── cost-summary.tsx    # Monthly cost overview cards
+│   │   │   ├── cost-chart.tsx      # Monthly cost trend chart
+│   │   │   ├── cost-by-project.tsx # Cost per project table
+│   │   │   ├── cost-by-agent.tsx   # Cost breakdown by agent
+│   │   │   └── date-range-picker.tsx # Date range filter
+│   │   ├── health/                 # Health-related components
+│   │   │   ├── health-card.tsx     # Health metric card
+│   │   │   ├── health-grid.tsx     # Health overview grid
+│   │   │   └── service-status.tsx  # External service status
+│   │   ├── auth/                   # Auth components
+│   │   │   └── login-form.tsx      # Email/password login form
+│   │   └── shared/                 # Shared components
+│   │       ├── logo.tsx            # ClowForge logo
+│   │       ├── empty-state.tsx     # Empty state placeholder
+│   │       ├── relative-time.tsx   # "2 hours ago" display
+│   │       ├── duration.tsx        # "3m 24s" duration display
+│   │       ├── cost-display.tsx    # "$0.45" formatted cost
+│   │       └── copy-button.tsx     # Copy to clipboard button
+│   ├── hooks/
+│   │   ├── use-toast.ts            # Toast notification hook
+│   │   ├── use-realtime.ts         # Supabase realtime subscription
+│   │   ├── use-projects.ts         # Projects data hook
+│   │   ├── use-runs.ts             # Runs data hook
+│   │   ├── use-costs.ts            # Costs data hook
+│   │   └── use-auth.ts             # Auth state hook
+│   ├── lib/
+│   │   ├── supabase/
+│   │   │   ├── client.ts           # Browser Supabase client
+│   │   │   ├── server.ts           # Server Supabase client
+│   │   │   ├── middleware.ts       # Auth middleware helper
+│   │   │   └── types.ts            # Generated database types
+│   │   ├── vercel/
+│   │   │   └── api.ts              # Vercel deploy API helpers
+│   │   ├── validations/
+│   │   │   ├── deploy.ts           # Deploy action schemas
+│   │   │   └── auth.ts             # Auth form schemas
+│   │   ├── utils.ts                # Utility functions (cn, formatCost)
+│   │   └── constants.ts            # App constants (statuses, agents)
+│   ├── types/
+│   │   ├── index.ts                # Re-exports
+│   │   ├── database.ts             # Supabase generated types
+│   │   ├── forge.ts                # Forge-specific types
+│   │   └── api.ts                  # API response types
+│   └── providers/
+│       ├── query-provider.tsx      # React Query provider
+│       └── toast-provider.tsx      # Toast notifications provider
+├── middleware.ts                   # Next.js middleware (auth protection)
+└── tests/
+    ├── setup.ts                    # Vitest setup
+    └── components/
+        └── project-card.test.tsx   # Example component test

@@ -1,0 +1,261 @@
+{
+  "$schema": "design-tokens-v1",
+  "project": "clowforge-dashboard",
+  "colors": {
+    "primary": {
+      "50": "#eef2ff",
+      "100": "#e0e7ff",
+      "200": "#c7d2fe",
+      "300": "#a5b4fc",
+      "400": "#818cf8",
+      "500": "#4338CA",
+      "600": "#3730a3",
+      "700": "#312e81",
+      "800": "#2e1065",
+      "900": "#1e1b4b",
+      "950": "#1e1b4b"
+    },
+    "secondary": {
+      "50": "#ecfdf5",
+      "100": "#d1fae5",
+      "200": "#a7f3d0",
+      "300": "#6ee7b7",
+      "400": "#34d399",
+      "500": "#059669",
+      "600": "#047857",
+      "700": "#065f46",
+      "800": "#064e3b",
+      "900": "#064e3b",
+      "950": "#022c22"
+    },
+    "accent": {
+      "50": "#eef2ff",
+      "100": "#e0e7ff",
+      "200": "#c7d2fe",
+      "300": "#a5b4fc",
+      "400": "#818cf8",
+      "500": "#818CF8",
+      "600": "#6366f1",
+      "700": "#4f46e5",
+      "800": "#4338ca",
+      "900": "#3730a3",
+      "950": "#312e81"
+    },
+    "neutral": {
+      "50": "#f9fafb",
+      "100": "#f3f4f6",
+      "200": "#e5e7eb",
+      "300": "#d1d5db",
+      "400": "#9ca3af",
+      "500": "#6b7280",
+      "600": "#4b5563",
+      "700": "#374151",
+      "800": "#1f2937",
+      "900": "#111827",
+      "950": "#030712"
+    },
+    "success": {
+      "light": "#d1fae5",
+      "DEFAULT": "#059669",
+      "dark": "#065f46"
+    },
+    "warning": {
+      "light": "#fef3c7",
+      "DEFAULT": "#f59e0b",
+      "dark": "#d97706"
+    },
+    "error": {
+      "light": "#fee2e2",
+      "DEFAULT": "#DC2626",
+      "dark": "#991b1b"
+    },
+    "info": {
+      "light": "#dbeafe",
+      "DEFAULT": "#3b82f6",
+      "dark": "#1e40af"
+    },
+    "semantic": {
+      "background": {
+        "primary": "#ffffff",
+        "secondary": "#f9fafb",
+        "tertiary": "#f3f4f6",
+        "dark": "#1E1B4B"
+      },
+      "foreground": {
+        "primary": "#111827",
+        "secondary": "#4b5563",
+        "muted": "#6b7280",
+        "inverted": "#ffffff"
+      },
+      "border": {
+        "default": "#e5e7eb",
+        "strong": "#d1d5db",
+        "focus": "#4338CA"
+      },
+      "surface": {
+        "elevated": "#ffffff",
+        "sunken": "#f9fafb"
+      }
+    },
+    "dark": {
+      "semantic": {
+        "background": {
+          "primary": "#030712",
+          "secondary": "#111827",
+          "tertiary": "#1f2937"
+        },
+        "foreground": {
+          "primary": "#f9fafb",
+          "secondary": "#d1d5db",
+          "muted": "#9ca3af",
+          "inverted": "#030712"
+        },
+        "border": {
+          "default": "#1f2937",
+          "strong": "#374151",
+          "focus": "#818cf8"
+        },
+        "surface": {
+          "elevated": "#111827",
+          "sunken": "#030712"
+        }
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "mono": "'JetBrains Mono', 'Fira Code', Consolas, monospace"
+    },
+    "fontSize": {
+      "xs": [
+        "0.75rem",
+        {
+          "lineHeight": "1rem",
+          "letterSpacing": "0.02em"
+        }
+      ],
+      "sm": [
+        "0.875rem",
+        {
+          "lineHeight": "1.25rem",
+          "letterSpacing": "0"
+        }
+      ],
+      "base": [
+        "0.9375rem",
+        {
+          "lineHeight": "1.5rem",
+          "letterSpacing": "0"
+        }
+      ],
+      "lg": [
+        "1.0625rem",
+        {
+          "lineHeight": "1.75rem",
+          "letterSpacing": "-0.01em"
+        }
+      ],
+      "xl": [
+        "1.25rem",
+        {
+          "lineHeight": "1.875rem",
+          "letterSpacing": "-0.01em"
+        }
+      ],
+      "2xl": [
+        "1.5rem",
+        {
+          "lineHeight": "2rem",
+          "letterSpacing": "-0.02em"
+        }
+      ],
+      "3xl": [
+        "1.875rem",
+        {
+          "lineHeight": "2.25rem",
+          "letterSpacing": "-0.02em"
+        }
+      ],
+      "4xl": [
+        "2.25rem",
+        {
+          "lineHeight": "2.5rem",
+          "letterSpacing": "-0.03em"
+        }
+      ]
+    },
+    "fontWeight": {
+      "normal": "400",
+      "medium": "500",
+      "semibold": "600",
+      "bold": "700"
+    }
+  },
+  "spacing": {
+    "comment": "Uses Tailwind's default 4px grid: 1=4px, 2=8px, 3=12px, 4=16px, etc.",
+    "section": "Semantic spacing for dashboard layouts",
+    "page-x": {
+      "mobile": "1rem",
+      "md": "1.5rem",
+      "lg": "2rem"
+    },
+    "page-y": {
+      "mobile": "1.5rem",
+      "md": "2rem",
+      "lg": "2.5rem"
+    },
+    "card-padding": {
+      "mobile": "1rem",
+      "md": "1.5rem"
+    },
+    "stack-xs": "0.25rem",
+    "stack-sm": "0.5rem",
+    "stack-md": "1rem",
+    "stack-lg": "1.5rem",
+    "stack-xl": "2rem",
+    "inline-sm": "0.5rem",
+    "inline-md": "0.75rem",
+    "inline-lg": "1rem"
+  },
+  "borderRadius": {
+    "none": "0",
+    "sm": "0.25rem",
+    "DEFAULT": "0.5rem",
+    "md": "0.5rem",
+    "lg": "0.75rem",
+    "xl": "1rem",
+    "2xl": "1.5rem",
+    "full": "9999px"
+  },
+  "shadows": {
+    "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+    "DEFAULT": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+    "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+    "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+    "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+    "inner": "inset 0 2px 4px 0 rgb(0 0 0 / 0.06)"
+  },
+  "animation": {
+    "durations": {
+      "instant": "100ms",
+      "fast": "200ms",
+      "normal": "300ms",
+      "slow": "500ms"
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "in": "cubic-bezier(0.4, 0, 1, 1)",
+      "out": "cubic-bezier(0, 0, 0.2, 1)",
+      "inOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "smooth": "cubic-bezier(0.25, 0.1, 0.25, 1)"
+    }
+  },
+  "breakpoints": {
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1536px"
+  }
+}
